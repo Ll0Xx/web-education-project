@@ -1,0 +1,60 @@
+.container {
+  width: 1200px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.navbar {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  margin-top: 40px;
+  background: brown;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+  display: inline;
+}
+li a {
+  display: block;
+  float: left;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+.logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: black;
+}
+header {
+  display: flex;
+  background: url('../resources/img/bg.jpg');
+  background-origin: content-box;
+  height: 100vh;
+  background-size: cover;
+  z-index: 3;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+}
+a {
+  color: white;
+}
+/* header */
