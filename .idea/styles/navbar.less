@@ -1,22 +1,23 @@
 
 .navbar {
   display: flex;
+  position: relative;
   background: transparent;
   justify-content: space-between;
   margin-top: 40px;
 }
 
-ul {
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+.menu li {
   display: inline;
 }
 
-li a {
+.menu li a {
   display: block;
   float: left;
   padding: 20px 20px;
@@ -24,7 +25,7 @@ li a {
 }
 
 .logo {
-  display: block;
+  display: inline;
   float: left;
   font-size: 24px;
   line-height: 36px;
@@ -33,6 +34,71 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.menu li a:hover {
   background-color: black;
+}
+
+.navbar > .nav-btn {
+  display: none;
+}
+
+.navbar > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .navbar {
+    background: brown;
+  }
+
+  .navbar > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .navbar > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .navbar > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+
+  .navbar > .menu {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: brown;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+
+  .navbar > .menu >li a {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar > #nav-check:not(:checked) ~ .menu {
+    height: 0px;
+  }
+
+  .navbar > #nav-check:checked ~ .menu {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
 }
