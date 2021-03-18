@@ -1,60 +1,145 @@
 .container {
   width: 1200px;
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
 }
 .navbar {
-  width: 100%;
-  height: fit-content;
   display: flex;
+  position: relative;
+  background: transparent;
+  justify-content: space-between;
   margin-top: 40px;
-  background: brown;
 }
-ul {
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-li {
-  float: left;
+.menu li {
   display: inline;
 }
-li a {
+.menu li a {
   display: block;
   float: left;
   padding: 20px 20px;
   text-decoration: none;
 }
 .logo {
-  display: block;
+  display: inline;
   float: left;
-  font-size: 2em;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 900;
   padding: 10px 20px;
   text-decoration: none;
 }
-li a:hover {
+.menu li a:hover {
   background-color: black;
+}
+.navbar > .nav-btn {
+  display: none;
+}
+.navbar > #nav-check {
+  display: none;
+}
+@media (max-width: 600px) {
+  .navbar {
+    background: brown;
+  }
+  .navbar > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .navbar > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .navbar > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .navbar > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .navbar > .menu {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: brown;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .navbar > .menu > li a {
+    display: block;
+    width: 100%;
+  }
+  .navbar > #nav-check:not(:checked) ~ .menu {
+    height: 0px;
+  }
+  .navbar > #nav-check:checked ~ .menu {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
 }
 header {
   display: flex;
   background: url('../resources/img/bg.jpg');
   background-origin: content-box;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   z-index: 3;
 }
+.header-content {
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-content h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+}
+.header-content p {
+  font-family: RobotoSlab;
+  margin: 20px;
+  line-height: 24px;
+  font-size: 20px;
+}
+.header-button {
+  margin: 0 auto;
+  display: block;
+  border: 2px solid white;
+  background-color: transparent;
+  padding: 19px 35px;
+  font-size: 16px;
+  color: white;
+  margin-top: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 * {
-  padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 body {
-  margin: 0;
+  margin: 0px;
   font-family: 'Montserrat', sans-serif;
   background-color: #f4f4f4;
 }
 a {
   color: white;
 }
-/* header */
