@@ -1,6 +1,6 @@
 .services {
   text-align: center;
-  color: brown;
+  //color: brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,4 +13,46 @@
   margin-left: auto;
   height: 10px;
   border-top: 2px solid brown;
+}
+
+.services ul {
+  display: flex;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.services ul li {
+  max-width: 200px;
+  //max-height: 200px;
+  justify-content: space-around;;
+  margin: 20px;
+  display: inline;
+  float: left;
+}
+
+.services ul li p {
+  //width: 30%;
+  //background: brown;
+}
+
+.services div {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  padding: auto;
+  background-repeat: no-repeat;
+  //border:2px solid darkgray;
+  border-radius: 50%;
+}
+
+.services #typography {
+  background: url('../resources/img/icons.png') 22px 19px no-repeat;
+}
+
+.services #typography:hover {
+  background: brown;
 }
