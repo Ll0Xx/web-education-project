@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f090fb9-a710-4015-a345-57b831abfef5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_services.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_services.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +105,7 @@
       <workItem from="1616143436760" duration="2979000" />
       <workItem from="1616146812375" duration="17959000" />
       <workItem from="1616398551829" duration="583000" />
-      <workItem from="1616399155052" duration="13974000" />
+      <workItem from="1616399155052" duration="15771000" />
     </task>
     <task id="LOCAL-00001" summary="Split style.less to a different files and rework header layout">
       <created>1616070316812</created>
@@ -142,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616424789984</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added responsible display of the list of services">
+      <created>1616427462787</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616427462787</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +174,8 @@
     <MESSAGE value="Added support for mobile devices." />
     <MESSAGE value="Fixed header top margin" />
     <MESSAGE value="Added _section-title.less file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added _section-title.less file" />
+    <MESSAGE value="Added responsible display of the list of services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added responsible display of the list of services" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

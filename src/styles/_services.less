@@ -43,9 +43,14 @@
 }
 
 .services #typography {
-  background: url('../resources/img/icons.png') 22px 19px no-repeat;
+  .services-image(22px; 19px);
+  //background: url('./resources/img/icons.png') 22px 19px no-repeat;
 }
 
 .services #typography:hover {
   background: @main-color;
+}
+
+.services-image(@x; @y){
+  background: url('../resources/img/icons.png') @x @y no-repeat;
 }
