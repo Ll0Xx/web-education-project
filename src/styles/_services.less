@@ -3,14 +3,13 @@
 
 .services {
   text-align: center;
-  //color: brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .services_header {
-.section-title;
+  .section-title;
 }
 
 .services_header:after {
@@ -23,31 +22,23 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  justify-content: space-between;
+
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
   list-style-type: none;
 }
 
 .services ul li {
-  max-width: 200px;
-  //max-height: 200px;
-  justify-content: space-around;;
+  width: 300px;
+  //justify-content: space-around;;
   margin: 20px;
-  display: inline;
-  float: left;
-}
-
-.services ul li p {
-  //width: 30%;
-  //background: brown;
 }
 
 .services div {
   width: 90px;
   height: 90px;
   margin: auto;
-  //padding: auto 0;
   background-repeat: no-repeat;
-  //border:2px solid darkgray;
   border-radius: 50%;
 }
 

@@ -181,15 +181,13 @@ header {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  justify-content: space-between;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
   list-style-type: none;
 }
 .services ul li {
-  max-width: 200px;
-  justify-content: space-around;
+  width: 300px;
   margin: 20px;
-  display: inline;
-  float: left;
 }
 .services div {
   width: 90px;
