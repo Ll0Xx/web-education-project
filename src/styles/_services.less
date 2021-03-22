@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_section-title";
 
 .services {
   text-align: center;
@@ -8,13 +9,12 @@
   justify-content: center;
 }
 
-.services > span {
-  display: flex;
-  width: 50px;
-  margin-right: auto;
-  margin-left: auto;
-  height: 10px;
-  border-top: 2px solid @main-color;
+.services_header {
+.section-title;
+}
+
+.services_header:after {
+  .section-title-span;
 }
 
 .services ul {

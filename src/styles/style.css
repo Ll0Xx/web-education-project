@@ -95,6 +95,11 @@
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+  .navbar > #nav-check:checked ~ body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 header {
   display: block;
@@ -134,19 +139,41 @@ header {
   text-transform: uppercase;
   cursor: pointer;
 }
+.section-title {
+  margin-top: 100px;
+  size: 20px;
+  line-height: 24px;
+}
+.section-title-span {
+  height: 2px;
+  display: block;
+  width: 50px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #808080;
+  content: '';
+}
 .services {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.services > span {
-  display: flex;
+.services_header {
+  margin-top: 100px;
+  size: 20px;
+  line-height: 24px;
+}
+.services_header:after {
+  height: 2px;
+  display: block;
   width: 50px;
+  margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-  height: 10px;
-  border-top: 2px solid brown;
+  background: #808080;
+  content: '';
 }
 .services ul {
   display: flex;
