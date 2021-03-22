@@ -196,11 +196,30 @@ header {
   background-repeat: no-repeat;
   border-radius: 50%;
 }
-.services #typography {
+.typography {
   background: url('../resources/img/icons.png') 22px 19px no-repeat;
 }
-.services #typography:hover {
-  background: brown;
+.typography:hover {
+  z-index: 5;
+  background: url('../resources/img/icons.png') 22px -87px no-repeat;
+}
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+.overlay:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.overlay:hover:after {
+  background-color: brown;
+  opacity: 0.5;
 }
 * {
   box-sizing: border-box;
@@ -209,6 +228,7 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #f4f4f4;
+  z-index: -10;
 }
 a {
   color: white;

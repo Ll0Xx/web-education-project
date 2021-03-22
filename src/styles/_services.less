@@ -42,15 +42,47 @@
   border-radius: 50%;
 }
 
-.services #typography {
+.typography {
+  //z-index: 5;
   .services-image(22px; 19px);
-  //background: url('./resources/img/icons.png') 22px 19px no-repeat;
 }
 
-.services #typography:hover {
-  background: @main-color;
+//.typography > * {
+//  z-index: 5;
+//}
+
+.typography:hover {
+  z-index: 5;
+  .services-image(22px; -87px);
 }
 
-.services-image(@x; @y){
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.overlay:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.overlay:hover:after {
+  background-color: brown;
+  opacity: .5;
+
+}
+
+//.red:after {
+//  z-index: -1;
+//  background-color: brown;
+//}
+
+.services-image(@x; @y) {
   background: url('../resources/img/icons.png') @x @y no-repeat;
 }
