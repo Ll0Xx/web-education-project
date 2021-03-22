@@ -1,3 +1,5 @@
+@import "_variables";
+
 .services {
   text-align: center;
   //color: brown;
@@ -12,7 +14,7 @@
   margin-right: auto;
   margin-left: auto;
   height: 10px;
-  border-top: 2px solid brown;
+  border-top: 2px solid @main-color;
 }
 
 .services ul {
@@ -43,7 +45,7 @@
   width: 90px;
   height: 90px;
   margin: auto;
-  padding: auto;
+  //padding: auto 0;
   background-repeat: no-repeat;
   //border:2px solid darkgray;
   border-radius: 50%;
@@ -54,5 +56,5 @@
 }
 
 .services #typography:hover {
-  background: brown;
+  background: @main-color;
 }

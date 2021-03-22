@@ -78,20 +78,18 @@
   .navbar > .menu {
     position: absolute;
     display: block;
+    top: 100%;
     width: 100%;
     background-color: brown;
     height: 0;
-    transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
-    left: 0;
   }
   .navbar > .menu > li a {
     display: block;
     width: 100%;
   }
   .navbar > #nav-check:not(:checked) ~ .menu {
-    height: 0;
+    top: 0;
   }
   .navbar > #nav-check:checked ~ .menu {
     height: calc(100vh - 50px);
@@ -170,7 +168,6 @@ header {
   width: 90px;
   height: 90px;
   margin: auto;
-  padding: auto;
   background-repeat: no-repeat;
   border-radius: 50%;
 }
