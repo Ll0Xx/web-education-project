@@ -12,7 +12,8 @@
 .about-us-description {
   display: flex;
   margin: 20px;
-  justify-content: space-around;
+  //justify-content: space-around;
+  justify-content: center;
   -webkit-flex-flow: row wrap;
 
   p {
@@ -23,14 +24,34 @@
 .about-us-carousel {
   list-style: none;
   display: flex;
+  justify-content: space-between;
 }
 
 .about-us-carousel li {
-  position: relative;
+  width: 263px;
+  margin: 20px;
+  justify-content: space-around;
 }
 
 .about-us-carousel li p {
-  position: absolute;
   top: 0;
   left: 0;
+}
+
+.about-us-empl-image {
+  width: 263px;
+  height: 250px;
+
+  margin-right: auto;
+  margin-left: auto;
+  background: brown;
+}
+
+.about-us-empl-image:hover {
+  background: white;
+  opacity: .5;
+}
+
+.about-us-empl-name {
+  text-transform: uppercase;
 }

@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_about-us.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_about-us.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_section-title.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_section-title.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_services.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_services.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css.map" afterDir="false" />
     </list>
@@ -27,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
