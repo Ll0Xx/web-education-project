@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2f090fb9-a710-4015-a345-57b831abfef5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_services.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_services.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_header.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_header.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616427462787</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Remove border from services images">
+      <created>1616490040532</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616490040532</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +173,8 @@
     <MESSAGE value="Added _section-title.less file" />
     <MESSAGE value="Added responsible display of the list of services" />
     <MESSAGE value="Fixed displaying of Services images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed displaying of Services images" />
+    <MESSAGE value="Remove border from services images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove border from services images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
