@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f090fb9-a710-4015-a345-57b831abfef5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/_services.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_services.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css.map" afterDir="false" />
@@ -165,7 +164,8 @@
     <MESSAGE value="Fixed header top margin" />
     <MESSAGE value="Added _section-title.less file" />
     <MESSAGE value="Added responsible display of the list of services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added responsible display of the list of services" />
+    <MESSAGE value="Fixed displaying of Services images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed displaying of Services images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
