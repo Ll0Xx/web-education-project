@@ -250,14 +250,16 @@ header {
   width: 100%;
   height: 100%;
 }
+.about-us-background {
+  background: #f8f8f8;
+}
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
   font-family: RobotoSlab, serif;
-  background-color: #f4f4f4;
-  z-index: -10;
+  background-color: white;
 }
 h2 {
   text-transform: uppercase;
