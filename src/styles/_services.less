@@ -30,7 +30,6 @@
 
 .services ul li {
   width: 300px;
-  //justify-content: space-around;;
   margin: 20px;
 }
 
@@ -42,26 +41,52 @@
   border-radius: 50%;
 }
 
-.typography {
-  //z-index: 5;
+.typography:after {
+  .services-overlay;
   .services-image(22px; 19px);
 }
 
-//.typography > * {
-//  z-index: 5;
-//}
-
-.typography:hover {
-  z-index: 5;
+.typography:hover:after {
   .services-image(22px; -87px);
 }
 
-.overlay {
-  position: relative;
-  z-index: 1;
+.solid-code:after {
+  .services-overlay;
+  .services-image(-91px; 19px);
 }
 
-.overlay:after {
+.solid-code:hover:after {
+  .services-image(-91px; -88px);
+}
+
+.services-image(@x; @y) {
+  background: url('../resources/img/icons.png') @x @y no-repeat;
+}
+
+.expert-support:after {
+  .services-overlay;
+  .services-image(-209px; 19px);
+}
+
+.expert-support:hover:after {
+  .services-image(-209px; -88px);
+}
+
+.overlay{
+  position: relative;
+  background: transparent;
+  border: solid black 1px;
+}
+
+.overlay:hover{
+  background: brown;
+}
+
+.services-image(@x; @y) {
+  background: url('../resources/img/icons.png') @x @y no-repeat;
+}
+
+.services-overlay {
   position: absolute;
   content: "";
   top: 0;
@@ -69,20 +94,4 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  opacity: 0;
-}
-
-.overlay:hover:after {
-  background-color: brown;
-  opacity: .5;
-
-}
-
-//.red:after {
-//  z-index: -1;
-//  background-color: brown;
-//}
-
-.services-image(@x; @y) {
-  background: url('../resources/img/icons.png') @x @y no-repeat;
 }
