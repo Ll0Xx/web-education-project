@@ -138,6 +138,21 @@ header {
   text-transform: uppercase;
   cursor: pointer;
 }
+.section_header {
+  margin-top: 100px;
+  size: 20px;
+  line-height: 24px;
+}
+.section_header:after {
+  height: 2px;
+  display: block;
+  width: 50px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #808080;
+  content: '';
+}
 .section-title {
   margin-top: 100px;
   size: 20px;
@@ -158,21 +173,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.services_header {
-  margin-top: 100px;
-  size: 20px;
-  line-height: 24px;
-}
-.services_header:after {
-  height: 2px;
-  display: block;
-  width: 50px;
-  margin-top: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  background: #808080;
-  content: '';
 }
 .services ul {
   display: flex;
@@ -252,6 +252,33 @@ header {
 }
 .about-us-background {
   background: #f8f8f8;
+}
+.about-us {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-us-description {
+  display: flex;
+  margin: 20px;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+}
+.about-us-description p {
+  max-width: 500px;
+}
+.about-us-carousel {
+  list-style: none;
+  display: flex;
+}
+.about-us-carousel li {
+  position: relative;
+}
+.about-us-carousel li p {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 * {
   box-sizing: border-box;

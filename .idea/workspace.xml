@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f090fb9-a710-4015-a345-57b831abfef5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/_about-us.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_about-us.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_about-us.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_section-title.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_section-title.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_services.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_services.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616491033653</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added _about-us.less section and changed background to white">
+      <created>1616493132268</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616493132268</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +206,8 @@
     <MESSAGE value="Fixed displaying of Services images" />
     <MESSAGE value="Remove border from services images" />
     <MESSAGE value="Change font to RobotoSlab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change font to RobotoSlab" />
+    <MESSAGE value="added _about-us.less section and changed background to white" />
+    <option name="LAST_COMMIT_MESSAGE" value="added _about-us.less section and changed background to white" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

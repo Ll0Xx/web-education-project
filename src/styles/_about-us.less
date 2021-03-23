@@ -1,3 +1,36 @@
 .about-us-background {
   background: #f8f8f8;
 }
+
+.about-us {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us-description {
+  display: flex;
+  margin: 20px;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+
+  p {
+    max-width: 500px;
+  }
+}
+
+.about-us-carousel {
+  list-style: none;
+  display: flex;
+}
+
+.about-us-carousel li {
+  position: relative;
+}
+
+.about-us-carousel li p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
