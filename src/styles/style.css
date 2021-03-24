@@ -266,6 +266,8 @@ header {
   -webkit-flex-flow: row wrap;
 }
 .about-us-description p {
+  margin-left: 15px;
+  margin-right: 15px;
   max-width: 500px;
 }
 .about-us-carousel {
@@ -291,9 +293,31 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
-.about-us-empl-image:hover {
-  color: #0037ff;
-  opacity: 0.5;
+.a-overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  list-style-type: none;
+  top: 0;
+  left: 0;
+}
+.a-overlay:hover {
+  background: rgba(113, 113, 113, 0.5);
+}
+.a-overlay:hover > .about-us-empl-social {
+  opacity: 1;
+}
+.empl1 {
+  background: url("../resources/img/img-01.jpg");
+}
+.empl2 {
+  background: url("../resources/img/img-02.jpg");
+}
+.empl3 {
+  background: url("../resources/img/img-03.jpg");
+}
+.empl4 {
+  background: url("../resources/img/img-04.jpg");
 }
 .about-us-empl-name {
   text-transform: uppercase;
@@ -302,6 +326,7 @@ header {
   width: 100%;
   padding: 0;
   margin: 0;
+  opacity: 0;
   position: absolute;
   list-style-type: none;
   top: 190px;
@@ -314,25 +339,21 @@ header {
   display: inline-block;
 }
 .about-us-empl-fb {
-  border: black solid 1px;
   width: 100%;
   height: 100%;
   background: url('../resources/img/icons_2.png') 8px 5px no-repeat;
 }
 .about-us-empl-tw {
-  border: black solid 1px;
   width: 100%;
   height: 100%;
   background: url('../resources/img/icons_2.png') -22px 5px no-repeat;
 }
 .about-us-empl-g {
-  border: black solid 1px;
   width: 100%;
   height: 100%;
   background: url('../resources/img/icons_2.png') -52px 5px no-repeat;
 }
 .about-us-empl-in {
-  border: black solid 1px;
   width: 100%;
   height: 100%;
   background: url('../resources/img/icons_2.png') -83px 5px no-repeat;
