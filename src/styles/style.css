@@ -271,11 +271,14 @@ header {
 .about-us-carousel {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  -webkit-flex-flow: row wrap;
+  margin-bottom: 100px;
 }
 .about-us-carousel li {
   width: 263px;
-  margin: 20px;
+  margin: 10px;
+  position: relative;
   justify-content: space-around;
 }
 .about-us-carousel li p {
@@ -287,14 +290,55 @@ header {
   height: 250px;
   margin-right: auto;
   margin-left: auto;
-  background: brown;
 }
 .about-us-empl-image:hover {
-  background: white;
+  color: #0037ff;
   opacity: 0.5;
 }
 .about-us-empl-name {
   text-transform: uppercase;
+}
+.about-us-empl-social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  list-style-type: none;
+  top: 190px;
+  left: 0;
+}
+.about-us-empl-social li {
+  margin: 10px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+.about-us-empl-fb {
+  border: black solid 1px;
+  width: 100%;
+  height: 100%;
+  background: url('../resources/img/icons_2.png') 8px 5px no-repeat;
+}
+.about-us-empl-tw {
+  border: black solid 1px;
+  width: 100%;
+  height: 100%;
+  background: url('../resources/img/icons_2.png') -22px 5px no-repeat;
+}
+.about-us-empl-g {
+  border: black solid 1px;
+  width: 100%;
+  height: 100%;
+  background: url('../resources/img/icons_2.png') -52px 5px no-repeat;
+}
+.about-us-empl-in {
+  border: black solid 1px;
+  width: 100%;
+  height: 100%;
+  background: url('../resources/img/icons_2.png') -83px 5px no-repeat;
+}
+.about-us-empl-social li:hover {
+  background: brown;
 }
 * {
   box-sizing: border-box;
