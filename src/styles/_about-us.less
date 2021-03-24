@@ -1,3 +1,13 @@
+@import "_variables";
+
+@selectors: 1, 2, 3, 4;
+@social-networks: {
+  fb: 8px;
+  tw: -22px;
+  g: -52px;
+  in: -83px;
+}
+
 .about-us-background {
   background: #f8f8f8;
 }
@@ -67,21 +77,11 @@
   opacity: 1;
 }
 
-.empl1 {
-  background: url("../resources/img/img-01.jpg");
-}
-
-.empl2 {
-  background: url("../resources/img/img-02.jpg");
-}
-
-.empl3 {
-  background: url("../resources/img/img-03.jpg");
-}
-
-.empl4 {
-  background: url("../resources/img/img-04.jpg");
-}
+each(@selectors, {
+  .empl@{value} {
+    background: url("../resources/img/img-0@{value}.jpg");
+  }
+});
 
 .about-us-empl-name {
   text-transform: uppercase;
@@ -105,21 +105,11 @@
   display: inline-block;
 }
 
-.about-us-empl-fb {
-  .social-icons(8px; 5px);
-}
-
-.about-us-empl-tw {
-  .social-icons(-22px; 5px);
-}
-
-.about-us-empl-g {
-  .social-icons(-52px; 5px);
-}
-
-.about-us-empl-in {
-  .social-icons(-83px; 5px);
-}
+each(@social-networks, {
+  .about-us-empl-@{key} {
+    .social-icons(@value; 5px);
+  }
+});
 
 .social-icons(@x; @y) {
   width: 100%;
@@ -128,5 +118,5 @@
 }
 
 .about-us-empl-social li:hover {
-  background: brown;
+  background: @main-color;
 }
