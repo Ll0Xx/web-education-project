@@ -1,6 +1,5 @@
 @import "_variables";
 
-@selectors: 1, 2, 3, 4;
 @social-networks: {
   fb: 8px;
   tw: -22px;
@@ -63,7 +62,7 @@
   margin-right: auto;
   margin-left: auto;
 
-  .a-overlay {
+  .impl-image-overlay {
     width: 100%;
     height: 100%;
     position: relative;
@@ -101,11 +100,14 @@
   }
 }
 
-each(@selectors, {
-  .empl@{value} {
-    background: url("../resources/img/img-0@{value}.jpg");
+@iterations: 0;
+.empl-loop (@i) when (@i <= 5) {
+  .empl@{i} {
+    background: url("../resources/img/img-@{i}.jpg");
   }
-});
+  .empl-loop(@i + 1);
+}
+.empl-loop (@iterations);
 
 each(@social-networks, {
   .about-us-empl-@{key} {
