@@ -259,33 +259,36 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-.about-us-description {
+.about-us .about-us-description {
   display: flex;
   margin: 20px;
   justify-content: center;
   -webkit-flex-flow: row wrap;
 }
-.about-us-description p {
+.about-us .about-us-description p {
   margin-left: 15px;
   margin-right: 15px;
   max-width: 500px;
 }
-.about-us-carousel {
+.about-us .about-us-carousel {
   list-style: none;
   display: flex;
   justify-content: center;
   -webkit-flex-flow: row wrap;
   margin-bottom: 100px;
 }
-.about-us-carousel li {
+.about-us .about-us-carousel li {
   width: 263px;
   margin: 10px;
   position: relative;
   justify-content: space-around;
 }
-.about-us-carousel li p {
+.about-us .about-us-carousel li p {
   top: 0;
   left: 0;
+}
+.about-us .about-us-carousel .about-us-empl-name {
+  text-transform: uppercase;
 }
 .about-us-empl-image {
   width: 263px;
@@ -293,7 +296,7 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
-.a-overlay {
+.about-us-empl-image .a-overlay {
   width: 100%;
   height: 100%;
   position: relative;
@@ -301,11 +304,28 @@ header {
   top: 0;
   left: 0;
 }
-.a-overlay:hover {
+.about-us-empl-image .a-overlay:hover {
   background: rgba(113, 113, 113, 0.5);
 }
-.a-overlay:hover > .about-us-empl-social {
+.about-us-empl-image .a-overlay:hover > .about-us-empl-social {
   opacity: 1;
+}
+.about-us-empl-image .a-overlay .about-us-empl-social {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  list-style-type: none;
+  top: 190px;
+  left: 0;
+}
+.about-us-empl-image .a-overlay .about-us-empl-social li {
+  margin: 4px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+.about-us-empl-image .a-overlay .about-us-empl-social li:hover {
+  background: brown;
 }
 .empl1 {
   background: url("../resources/img/img-01.jpg");
@@ -318,25 +338,6 @@ header {
 }
 .empl4 {
   background: url("../resources/img/img-04.jpg");
-}
-.about-us-empl-name {
-  text-transform: uppercase;
-}
-.about-us-empl-social {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  position: absolute;
-  list-style-type: none;
-  top: 190px;
-  left: 0;
-}
-.about-us-empl-social li {
-  margin: 5px;
-  width: 28px;
-  height: 28px;
-  display: inline-block;
 }
 .about-us-empl-fb {
   width: 100%;
@@ -357,9 +358,6 @@ header {
   width: 100%;
   height: 100%;
   background: url('../resources/img/icons_2.png') -83px 5px no-repeat;
-}
-.about-us-empl-social li:hover {
-  background: brown;
 }
 .latest-works {
   text-align: center;
