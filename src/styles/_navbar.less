@@ -12,17 +12,21 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
 
-.menu li {
-  display: inline;
-}
+  li {
+    display: inline;
 
-.menu li a {
-  display: block;
-  float: left;
-  padding: 20px 20px;
-  text-decoration: none;
+    a {
+      display: block;
+      float: left;
+      padding: 20px 20px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
 }
 
 .logo {
@@ -33,10 +37,6 @@
   font-weight: 900;
   padding: 10px 20px;
   text-decoration: none;
-}
-
-.menu li a:hover {
-  background-color: black;
 }
 
 .navbar > .nav-btn {
