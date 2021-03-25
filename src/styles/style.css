@@ -459,12 +459,12 @@ header .header-content .header-button {
 }
 .latest-works .latest-work-overlay {
   width: 100%;
+  height: 100%;
   opacity: 0;
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
 }
 .latest-works .latest-work-overlay:hover {
   background: rgba(165, 42, 42, 0.7);
@@ -490,17 +490,26 @@ header .header-content .header-button {
   margin: 8px;
 }
 .latest-works-get-in-touch {
-  height: 369px;
   width: 100%;
-  margin-top: 100px;
-  background-origin: content-box;
-  background-size: cover;
+  height: 369px;
+  align-items: center;
   display: flex;
-  justify-content: center;
   text-align: center;
-  color: white;
+  justify-content: center;
   flex-direction: column;
+  color: white;
   background: url("../resources/img/bg_2.jpg") center;
+}
+.latest-works-get-in-touch .latest-works-get-in-touch-header {
+  font-size: 30px;
+  line-height: 1.47;
+}
+.latest-works-get-in-touch .latest-works-get-in-touch-button {
+  margin-top: 50px;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: solid 2px white;
 }
 @media (min-width: 800px) {
   .cards {
