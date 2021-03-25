@@ -365,23 +365,23 @@ header .header-content .header-button {
   flex-direction: column;
   justify-content: center;
 }
-.switch-toggle {
+.latest-works .switch-toggle {
   float: left;
   display: flex;
   justify-content: center;
 }
-.switch-toggle input {
+.latest-works .switch-toggle input {
   position: absolute;
   opacity: 0;
 }
-.switch-toggle input + label {
+.latest-works .switch-toggle input + label {
   padding: 15px;
   float: left;
   font-size: 16px;
   line-height: 1.5;
   cursor: pointer;
 }
-.switch-toggle input:checked + label {
+.latest-works .switch-toggle input:checked + label {
   color: brown;
   font-weight: 600;
 }
