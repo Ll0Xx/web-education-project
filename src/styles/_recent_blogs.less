@@ -1,5 +1,7 @@
 .resent-blogs {
   ul {
+    padding: 0;
+
     li {
       display: flex;
 
@@ -9,35 +11,63 @@
         margin-top: 70px;
         text-align: left;
 
+        img {
+          width: 35%;
+          object-fit: cover;
+        }
+
         .blog-header {
           margin-left: 50px;
           justify-content: space-around;
           display: flex;
 
           .blog-container {
-
             display: flex;
 
             .blog-date {
               width: 76px;
               height: 76px;
               text-align: center;
-              border: 2px solid black;
+              color: #777777;
+              margin: 0;
+              font-weight: 1000;
+              font-family: 'Montserrat', serif;
+              border: 2px solid #555555;
+
+              :first-line {
+                font-size: 24px;
+              }
             }
 
-            .blog-title {
+            .blog-title-container {
               margin-left: 20px;
               height: 100%;
               padding-bottom: 20px;
 
-              :first-child {
+              .blog-title {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
                 height: 50%;
+
+                p {
+                  margin: 0;
+                  font-size: 24px;
+                }
+
+                :hover {
+                  color: brown;
+                }
               }
 
-              :last-child {
+              .blog-author {
                 height: 50%;
+                font-weight: 600;
                 margin-top: 20px;
                 font-size: 12px;
+
+                :hover {
+                  color: brown;
+                }
               }
             }
           }
@@ -48,13 +78,25 @@
           }
 
           .blog-button {
-            font-family: 'RobotoSlab', serif;
-            font-weight: 1000;
-            text-transform: uppercase;
-            color: black;
+
+            a {
+              font-family: 'RobotoSlab', serif;
+              font-weight: 1000;
+              text-transform: uppercase;
+            }
+
+            :hover {
+              color: brown;
+            }
           }
         }
       }
     }
+  }
+}
+
+@media (max-width: 765px) {
+  .resent-blogs ul li .blog-content img {
+    display: none;
   }
 }
