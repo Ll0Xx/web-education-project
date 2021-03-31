@@ -522,6 +522,51 @@ header .header-content .header-button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.resent-blogs ul li {
+  display: flex;
+}
+.resent-blogs ul li .blog-content {
+  display: flex;
+  margin-top: 70px;
+  text-align: left;
+}
+.resent-blogs ul li .blog-content .blog-header {
+  margin-left: 50px;
+  justify-content: space-around;
+  display: flex;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-container {
+  display: flex;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-container .blog-date {
+  width: 76px;
+  height: 76px;
+  text-align: center;
+  border: 2px solid black;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-container .blog-title {
+  margin-left: 20px;
+  height: 100%;
+  padding-bottom: 20px;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-container .blog-title :first-child {
+  height: 50%;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-container .blog-title :last-child {
+  height: 50%;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.resent-blogs ul li .blog-content .blog-header .blog-button {
+  font-family: 'RobotoSlab', serif;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: black;
+}
 * {
   box-sizing: border-box;
 }
