@@ -1,0 +1,40 @@
+.contact-container {
+  display: flex;
+  text-align: left;
+  max-width: 100px;
+
+
+  .contact-credits {
+    line-height: 1.67;
+    font-size: 12px;
+
+    :first-line {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 2.14;
+      font-size: 14px;
+    }
+
+    :before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      //background: url("../resources/img/icons_4.png") 0 0 no-repeat;
+    }
+
+    div {
+      margin: 8px;
+
+      .contact-icon{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: brown;
+      }
+    }
+  }
+
+}

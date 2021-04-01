@@ -666,6 +666,38 @@ header .header-content .header-button {
 .brands-background .brands .radio-list li .custom-radio:disabled + label::before {
   background-color: #e9ecef;
 }
+.contact-container {
+  display: flex;
+  text-align: left;
+  max-width: 100px;
+}
+.contact-container .contact-credits {
+  line-height: 1.67;
+  font-size: 12px;
+}
+.contact-container .contact-credits :first-line {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 2.14;
+  font-size: 14px;
+}
+.contact-container .contact-credits :before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.contact-container .contact-credits div {
+  margin: 8px;
+}
+.contact-container .contact-credits div .contact-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: brown;
+}
 * {
   box-sizing: border-box;
 }
