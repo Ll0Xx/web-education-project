@@ -603,6 +603,69 @@ header .header-content .header-button {
     display: none;
   }
 }
+.brands-background {
+  background: #f8f8f8;
+}
+.brands-background .brands {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 120px;
+}
+.brands-background .brands ul {
+  margin-top: 120px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  list-style-type: none;
+  -webkit-flex-flow: row wrap;
+}
+.brands-background .brands ul li {
+  margin: 20px;
+}
+.brands-background .brands .brands-description {
+  font-size: 18px;
+  line-height: 1.67;
+  font-style: italic;
+  font-weight: 400;
+  margin: 25px 0 0 0;
+}
+.brands-background .brands .brands-description span {
+  font-style: normal;
+  font-weight: 600;
+  margin: 120px;
+}
+.brands-background .brands .radio-list {
+  margin: 25px 0 100px 0;
+  display: flex;
+  list-style: none;
+}
+.brands-background .brands .radio-list li {
+  margin: 0;
+}
+.brands-background .brands .radio-list li .custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.brands-background .brands .radio-list li .custom-radio + label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: #dddddd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.brands-background .brands .radio-list li .custom-radio:not(:disabled):not(:checked) + label:hover::before {
+  background: #a1a1a1;
+}
+.brands-background .brands .radio-list li .custom-radio:checked + label::before {
+  background-color: brown;
+}
+.brands-background .brands .radio-list li .custom-radio:disabled + label::before {
+  background-color: #e9ecef;
+}
 * {
   box-sizing: border-box;
 }
