@@ -668,35 +668,47 @@ header .header-content .header-button {
 }
 .contact-container {
   display: flex;
+  flex-direction: column;
   text-align: left;
-  max-width: 100px;
+  max-width: 350px;
 }
-.contact-container .contact-credits {
+.contact-container .contact-item {
+  margin: 10px 10px 10px 10px;
+  display: flex;
+}
+.contact-container .contact-item .credits-icon-0 {
+  margin: 4px 8px 8px 8px;
+  width: 25px;
+  height: 25px;
+  background: url("../resources/img/icons_4.png") 0 calc(0px - 28px * 0) no-repeat;
+}
+.contact-container .contact-item .credits-icon-1 {
+  margin: 4px 8px 8px 8px;
+  width: 25px;
+  height: 25px;
+  background: url("../resources/img/icons_4.png") 0 calc(0px - 28px * 1) no-repeat;
+}
+.contact-container .contact-item .credits-icon-2 {
+  margin: 4px 8px 8px 8px;
+  width: 25px;
+  height: 25px;
+  background: url("../resources/img/icons_4.png") 0 calc(0px - 28px * 2) no-repeat;
+}
+.contact-container .contact-item .credits-icon-3 {
+  margin: 4px 8px 8px 8px;
+  width: 25px;
+  height: 25px;
+  background: url("../resources/img/icons_4.png") 0 calc(0px - 28px * 3) no-repeat;
+}
+.contact-container .contact-item .contact-credits {
   line-height: 1.67;
   font-size: 12px;
 }
-.contact-container .contact-credits :first-line {
+.contact-container .contact-item .contact-credits:first-line {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: 2.14;
   font-size: 14px;
-}
-.contact-container .contact-credits :before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 20px;
-  height: 20px;
-}
-.contact-container .contact-credits div {
-  margin: 8px;
-}
-.contact-container .contact-credits div .contact-icon {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: brown;
 }
 * {
   box-sizing: border-box;
