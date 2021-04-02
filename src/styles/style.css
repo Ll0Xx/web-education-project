@@ -667,10 +667,10 @@ header .header-content .header-button {
   background-color: #e9ecef;
 }
 .contact-container {
+  width: 35%;
   display: flex;
   flex-direction: column;
   text-align: left;
-  max-width: 350px;
 }
 .contact-container .contact-item {
   margin: 10px 10px 10px 10px;
@@ -709,6 +709,13 @@ header .header-content .header-button {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
+}
+.form-container {
+  width: 65%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
 }
 * {
   box-sizing: border-box;
