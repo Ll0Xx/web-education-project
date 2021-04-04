@@ -10,6 +10,7 @@
     float: left;
     display: flex;
     justify-content: center;
+    -webkit-flex-flow: row wrap;
 
     input {
       position: absolute;
@@ -47,6 +48,7 @@
     .latest-work-img-loop (@i) when (@i <= 13) {
       .latest-work-img-@{i} {
         background: url("../resources/img/img-@{i}.jpg");
+        background-size: cover;
 
         &:hover > .latest-work-overlay {
           opacity: 1;
