@@ -1,4 +1,6 @@
 .contact-container {
+  margin-top: 70px;
+  margin-bottom: 70px;
   display: flex;
 
   .credits-container {
@@ -41,12 +43,11 @@
   }
 
   @form-margin: 10px;
-  @form-input-padding: 4px;
+  @form-input-padding: 16px;
 
   .form-container {
     width: 65%;
     height: 100%;
-    border: 2px solid black;
     border-radius: 0;
     display: flex;
     flex-direction: column;
@@ -63,10 +64,15 @@
         padding: @form-input-padding;
         margin: 2px;
         border: 1px solid #555555;
+        font-family: 'RobotoSlab', serif;
         outline: none;
 
         &:focus {
           border: 1px solid brown;
+        }
+
+        &::placeholder {
+          text-transform: uppercase;
         }
       }
     }
@@ -77,16 +83,23 @@
       margin: @form-margin;
       float: left;
 
-      input {
+      textarea {
         width: calc(100% - 8px);
         height: 100%;
         padding: @form-input-padding;
         margin: 4px;
         border: 1px solid #555555;
+        font-family: 'RobotoSlab', serif;
+        resize: none;
         outline: none;
 
         &:focus {
           border: 1px solid brown;
+        }
+
+        &::placeholder {
+          font-family: 'RobotoSlab', serif;
+          text-transform: uppercase;
         }
       }
     }
@@ -96,17 +109,27 @@
       margin: 4px;
 
       .button {
+        font-size: 12px;
         border: 1px solid black;
         margin: 8px;
-        padding: 8px;
+        padding: 16px 10px;
 
         a {
+          text-transform: uppercase;
           margin: 8px;
         }
       }
 
       .submit-info {
+        height: min-content;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 12px;
         padding: 0 0;
+
+        span {
+          color: brown;
+        }
       }
     }
   }

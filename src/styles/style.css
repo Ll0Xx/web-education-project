@@ -677,6 +677,8 @@ header .header-content .header-button {
   background-color: #e9ecef;
 }
 .contact-container {
+  margin-top: 70px;
+  margin-bottom: 70px;
   display: flex;
 }
 .contact-container .credits-container {
@@ -728,7 +730,6 @@ header .header-content .header-button {
 .contact-container .form-container {
   width: 65%;
   height: 100%;
-  border: 2px solid black;
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -742,13 +743,17 @@ header .header-content .header-button {
 .contact-container .form-container .form-2-fields input {
   width: calc(50% - 8px);
   height: 100%;
-  padding: 4px;
+  padding: 16px;
   margin: 2px;
   border: 1px solid #555555;
+  font-family: 'RobotoSlab', serif;
   outline: none;
 }
 .contact-container .form-container .form-2-fields input:focus {
   border: 1px solid brown;
+}
+.contact-container .form-container .form-2-fields input::placeholder {
+  text-transform: uppercase;
 }
 .contact-container .form-container .form-field {
   height: 100px;
@@ -756,31 +761,46 @@ header .header-content .header-button {
   margin: 10px;
   float: left;
 }
-.contact-container .form-container .form-field input {
+.contact-container .form-container .form-field textarea {
   width: calc(100% - 8px);
   height: 100%;
-  padding: 4px;
+  padding: 16px;
   margin: 4px;
   border: 1px solid #555555;
+  font-family: 'RobotoSlab', serif;
+  resize: none;
   outline: none;
 }
-.contact-container .form-container .form-field input:focus {
+.contact-container .form-container .form-field textarea:focus {
   border: 1px solid brown;
+}
+.contact-container .form-container .form-field textarea::placeholder {
+  font-family: 'RobotoSlab', serif;
+  text-transform: uppercase;
 }
 .contact-container .form-container .form-field-submit {
   display: flex;
   margin: 4px;
 }
 .contact-container .form-container .form-field-submit .button {
+  font-size: 12px;
   border: 1px solid black;
   margin: 8px;
-  padding: 8px;
+  padding: 16px 10px;
 }
 .contact-container .form-container .form-field-submit .button a {
+  text-transform: uppercase;
   margin: 8px;
 }
 .contact-container .form-container .form-field-submit .submit-info {
+  height: min-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 12px;
   padding: 0 0;
+}
+.contact-container .form-container .form-field-submit .submit-info span {
+  color: brown;
 }
 @media (max-width: 800px) {
   .contact-container {
