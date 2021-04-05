@@ -11,22 +11,25 @@
   background: #f8f8f8;
 }
 
+@about-us-p-margin: 15px;
+
 .about-us {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   .about-us-description {
     display: flex;
-    margin: 20px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: justify;
     justify-content: center;
     -webkit-flex-flow: row wrap;
 
     p {
-      margin-left: 15px;
-      margin-right: 15px;
-      max-width: 500px;
+      width: calc(50% - @about-us-p-margin * 2);
+      margin-left: @about-us-p-margin;
+      margin-right: @about-us-p-margin;
     }
   }
 
@@ -107,6 +110,7 @@
   }
   .empl-loop(@i + 1);
 }
+
 .empl-loop (@iterations);
 
 each(@social-networks, {
