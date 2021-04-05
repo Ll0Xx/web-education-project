@@ -188,8 +188,12 @@ header .header-content .header-button {
   list-style-type: none;
 }
 .services ul li {
-  width: 300px;
+  width: 30%;
   margin: 20px;
+}
+.services ul li p:first-of-type {
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .services div {
   width: 90px;
