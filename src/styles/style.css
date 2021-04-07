@@ -723,7 +723,8 @@ header .header-content .header-button {
   background: url("../resources/img/icons_4.png") 0 calc(0px - 28px * 3) no-repeat;
 }
 .contact-container .credits-container .credits-item .contact-credits {
-  width: 100%;
+  width: calc(100% - 25px - 8px * 2);
+  overflow-wrap: break-word;
   line-height: 1.67;
   font-size: 12px;
 }
@@ -813,7 +814,7 @@ header .header-content .header-button {
     display: block;
   }
   .contact-container .credits-container {
-    width: 60%;
+    width: calc(100% - 20px * 2);
     margin-left: 20px;
     margin-right: 20px;
   }

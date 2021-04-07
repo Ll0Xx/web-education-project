@@ -1,3 +1,6 @@
+@contact-credits-size: 25px;
+@contact-credits-horizontal-margins: 8px;
+
 .contact-container {
   margin-top: 70px;
   margin-bottom: 70px;
@@ -18,9 +21,9 @@
       @iterations: 0;
       .contact-loop (@i) when (@i <= 3) {
         .credits-icon-@{i} {
-          margin: 4px 8px 8px 8px;
-          width: 25px;
-          height: 25px;
+          margin: 4px @contact-credits-horizontal-margins 8px @contact-credits-horizontal-margins;
+          width: @contact-credits-size;
+          height: @contact-credits-size;
           background: url("../resources/img/icons_4.png") 0 ~"calc(0px - 28px * @{i})" no-repeat;
         }
         .contact-loop(@i + 1);
@@ -28,7 +31,8 @@
       .contact-loop (@iterations);
 
       .contact-credits {
-        width: 100%;
+        width: calc(100% - @contact-credits-size - @contact-credits-horizontal-margins * 2);
+        overflow-wrap: break-word;
         line-height: 1.67;
         font-size: 12px;
 
@@ -133,16 +137,14 @@
       }
     }
   }
-}
-
-@credits-container-margin: 20px;
+} @credits-container-margin: 20px;
 
 @media (max-width: 800px) {
   .contact-container {
     display: block;
 
     .credits-container {
-      width: 100% - @credits-container-margin * 2;
+      width: calc(100% - @credits-container-margin * 2);
       margin-left: @credits-container-margin;
       margin-right: @credits-container-margin;
     }
