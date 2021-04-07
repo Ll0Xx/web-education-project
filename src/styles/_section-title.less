@@ -1,24 +1,19 @@
 .section_header {
-  .section-title;
-}
 
-.section_header:after {
-  .section-title-span;
-}
+  h2 {
+    margin-top: 100px;
+    size: 20px;
+    line-height: 24px;
 
-.section-title {
-  margin-top: 100px;
-  size: 20px;
-  line-height: 24px;
-}
-
-.section-title-span {
-  height: 2px;
-  display: block;
-  width: 50px;
-  margin-top: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  background: #808080;
-  content: '';
+    &:after {
+      height: 2px;
+      display: block;
+      width: 50px;
+      margin-top: 30px;
+      margin-right: auto;
+      margin-left: auto;
+      background: #808080;
+      content: '';
+    }
+  }
 }
