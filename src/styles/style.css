@@ -188,7 +188,8 @@ header .header-content .header-button {
   list-style-type: none;
 }
 .services ul li {
-  width: 30%;
+  width: 50%;
+  max-width: 345px;
   margin: 20px;
 }
 .services ul li p:first-of-type {
