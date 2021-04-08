@@ -826,13 +826,13 @@ header .header-content .header-button {
 }
 .contact-container .form-container .form-field-submit .button {
   font-size: 12px;
-  border: 1px solid black;
-  margin: 8px;
-  padding: 16px 10px;
-}
-.contact-container .form-container .form-field-submit .button a {
+  font-family: 'Roboto Slab', serif;
   text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #555555;
+  color: #555555;
   margin: 8px;
+  padding: 10px 24px;
 }
 .contact-container .form-container .form-field-submit .submit-info {
   height: min-content;
