@@ -838,6 +838,7 @@ header .header-content .header-button {
 .contact-container .form-container .form-2-fields {
   height: 36px;
   display: block;
+  border: none;
   margin: 10px;
   float: left;
 }
@@ -859,6 +860,7 @@ header .header-content .header-button {
 .contact-container .form-container .form-field {
   height: 100px;
   display: block;
+  border: none;
   margin: 10px;
   float: left;
 }
@@ -881,6 +883,7 @@ header .header-content .header-button {
 }
 .contact-container .form-container .form-field-submit {
   display: flex;
+  border: none;
   margin: 4px;
 }
 .contact-container .form-container .form-field-submit .button {
