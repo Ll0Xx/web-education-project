@@ -52,7 +52,20 @@
     padding-top: 0;
     background: brown;
   }
-  .navbar > .nav-btn {
+  .navbar .menu {
+    position: absolute;
+    display: block;
+    top: 100%;
+    width: 100%;
+    background-color: brown;
+    height: 0;
+    overflow-y: hidden;
+  }
+  .navbar .menu li a {
+    display: block;
+    width: 100%;
+  }
+  .navbar .nav-btn {
     margin: 0 auto;
     display: inline-block;
     position: absolute;
@@ -62,34 +75,21 @@
     right: 5px;
     top: 5px;
   }
-  .navbar > .nav-btn > label {
+  .navbar .nav-btn label {
     display: inline-block;
     width: 45px;
     height: 35px;
     padding: 8px 10px;
   }
-  .navbar > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .navbar > .nav-btn > label > span {
+  .navbar .nav-btn label span {
     display: block;
     width: 25px;
     height: 10px;
     border-top: 2px solid brown;
   }
-  .navbar > .menu {
-    position: absolute;
-    display: block;
-    top: 100%;
-    width: 100%;
-    background-color: brown;
-    height: 0;
-    overflow-y: hidden;
-  }
-  .navbar > .menu > li a {
-    display: block;
-    width: 100%;
+  .navbar.nav-btn:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .navbar > #nav-check:not(:checked) ~ .menu {
     top: 0;
