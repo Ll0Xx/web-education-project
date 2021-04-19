@@ -6,25 +6,20 @@
   flex-direction: column;
   justify-content: center;
 
-  .switch-toggle {
+  .switch-container {
     float: left;
     display: flex;
     justify-content: center;
     -webkit-flex-flow: row wrap;
 
-    input {
-      position: absolute;
-      opacity: 0;
+    .switch {
+      padding: 15px;
+      float: left;
+      font-size: 16px;
+      line-height: 1.5;
+      cursor: pointer;
 
-      & + label {
-        padding: 15px;
-        float: left;
-        font-size: 16px;
-        line-height: 1.5;
-        cursor: pointer;
-      }
-
-      &:checked + label {
+      &.active {
         color: @main-color;
         font-weight: 600;
       }
@@ -44,6 +39,7 @@
       margin: 8px;
       padding: 0;
       position: relative;
+      display: none;
 
       .work-overlay {
         width: 100%;
@@ -103,6 +99,10 @@
         height: 100%;
         z-index: 0;
       }
+    }
+
+    .show {
+      display: block;
     }
   }
 
