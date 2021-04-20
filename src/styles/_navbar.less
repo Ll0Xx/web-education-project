@@ -6,53 +6,72 @@
   background: transparent;
   justify-content: space-between;
   padding-top: 40px;
-}
 
-.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .icon{
+    display: none;
+  }
 
-  li {
+  .nav-btn {
+    display: none;
+  }
+
+  .logo {
     display: inline;
+    float: left;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 900;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+  }
 
-    a {
-      color: white;
-      display: block;
-      float: left;
-      padding: 20px 20px;
-      text-decoration: none;
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-      &:hover {
-        background-color: black;
+    li {
+      display: inline;
+
+      a {
+        color: white;
+        display: block;
+        float: left;
+        padding: 20px 20px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: black;
+        }
       }
     }
   }
 }
 
-.logo {
-  display: inline;
-  float: left;
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 900;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.navbar > .nav-btn {
-  display: none;
-}
-
-.navbar > #nav-check {
-  display: none;
-}
-
-@media (max-width: 765px) {
+@media (max-width: 800px) {
   .navbar {
     padding-top: 0;
     background: @main-color;
+
+    .icon{
+      display: flex;
+      width: 50px;
+      margin: 4px;
+      padding-top: 5px;
+      flex-direction: column;
+      justify-content: center;
+      background: white;
+      border-radius: 5px;
+
+      span {
+        display: block;
+        margin: 0 auto;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid @main-color;
+      }
+    }
 
     .menu {
       position: absolute;
@@ -84,35 +103,12 @@
         width: 45px;
         height: 35px;
         padding: 8px 10px;
-
-
-
-        span {
-          display: block;
-          width: 25px;
-          height: 10px;
-          border-top: 2px solid @main-color;
-        }
       }
     }
   }
 
-  .navbar.nav-btn:hover, .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-
-  .navbar > #nav-check:not(:checked) ~ .menu {
-    top: 0;
-  }
-
-  .navbar > #nav-check:checked ~ .menu {
+  .menu.responsive {
     height: calc(100vh - 50px);
     overflow-y: auto;
-  }
-
-  .navbar > #nav-check:checked ~ body {
-    margin: 0;
-    height: 100%;
-    overflow: hidden
   }
 }
