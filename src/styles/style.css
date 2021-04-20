@@ -344,6 +344,38 @@ header .header-content .header-button {
   font-size: 13px;
   line-height: 1.85;
 }
+.about-us .workers-container .previous-button {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: #a1a1a1;
+}
+.about-us .workers-container .previous-button:hover {
+  background: brown;
+}
+.about-us .workers-container .previous-button a {
+  width: 100%;
+  height: 100%;
+  background: url("../resources/img/arrows.png") 19px 17px no-repeat;
+}
+.about-us .workers-container .next-button {
+  position: absolute;
+  right: 0;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: #a1a1a1;
+}
+.about-us .workers-container .next-button:hover {
+  background: brown;
+}
+.about-us .workers-container .next-button a {
+  width: 100%;
+  height: 100%;
+  background: url("../resources/img/arrows.png") -9px 17px no-repeat;
+}
 .icon-fb {
   position: relative;
 }
@@ -400,7 +432,8 @@ header .header-content .header-button {
     width: calc(100% - 15px * 2);
   }
   .about-us .workers-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .about-us .workers-container .worker-container {
     width: 50%;
