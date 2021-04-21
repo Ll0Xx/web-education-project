@@ -17,39 +17,15 @@ function allowScroll() {
     };
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
 function showSlides(n) {
-    let i;
-
     const slides = document.getElementsByClassName("worker-container");
-    if (n > slides.length) {
-        slideIndex = 1
+    if (n === 1) {
+        const lastElement = slides[slides.length - 1];
+        lastElement.parentNode.insertBefore(lastElement, slides[0]);
+    } else {
+        const firstElement = slides[0];
+        firstElement.parentNode.insertBefore(firstElement, slides[slides.length]);
     }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-
-    // const dots = document.getElementsByClassName("dot");
-    // for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    // }
-    // dots[slideIndex-1].className += " active";
 }
 
 filterSelection("all")

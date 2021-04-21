@@ -35,14 +35,18 @@
 
   .workers-container {
     width: 100%;
-    justify-content: space-around;
+    position: relative;
+    height: 300px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
     margin-bottom: 100px;
     display: flex;
 
     .worker-container {
       display: block;
       margin: 15px;
-      width: 25%;
+      min-width: 250px;
 
       .worker-item {
         width: 100%;
@@ -110,9 +114,11 @@
     .previous-button {
       position: absolute;
       left: 0;
+      top: 50%;
       display: flex;
       width: 50px;
       height: 50px;
+      z-index: 3;
       background: #a1a1a1;
 
       &:hover {
@@ -129,9 +135,11 @@
     .next-button {
       position: absolute;
       right: 0;
+      top: 50%;
       display: flex;
       width: 50px;
       height: 50px;
+      z-index: 3;
       background: #a1a1a1;
 
       &:hover {
@@ -180,13 +188,15 @@ each(@social-networks, {
     }
 
     .workers-container {
-      display: flex;
-      flex-direction: column;
+      //display: flex;
+      //flex-wrap: wrap;
+      //overflow: hidden;
+      //flex-direction: column;
 
       .worker-container {
-        width: 50%;
-        margin-right: auto;
-        margin-left: auto;
+        //width: 50%;
+        //margin-right: auto;
+        //margin-left: auto;
       }
     }
   }
