@@ -1,0 +1,46 @@
+.prev, .next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+  top: 50%;
+  font-size: 3em;
+  transform: translateY(-50%);
+  transition: text-shadow 0.25s;
+  color: white;
+  background: pink;
+z-index: 3;
+
+  @media(max-width: 767px) {
+    display: none;
+  }
+}
+
+.prev {
+  position: absolute;
+  left: 1rem;
+  text-shadow: 1px 1px 8px black;
+
+  &:hover {
+    text-shadow: 1px 1px 5px black;
+  }
+
+  &:active {
+    text-shadow: 1px 1px 1px black;
+  }
+}
+
+.next {
+  position: absolute;
+  right: 1rem;
+  text-shadow: -1px -1px 8px black;
+
+  &:hover {
+    text-shadow: -1px -1px 5px black;
+  }
+
+  &:active {
+    text-shadow: -1px -1px 1px black;
+  }
+}

@@ -17,17 +17,6 @@ function allowScroll() {
     };
 }
 
-function showSlides(n) {
-    const slides = document.getElementsByClassName("worker-container");
-    if (n === 1) {
-        const lastElement = slides[slides.length - 1];
-        lastElement.parentNode.insertBefore(lastElement, slides[0]);
-    } else {
-        const firstElement = slides[0];
-        firstElement.parentNode.insertBefore(firstElement, slides[slides.length]);
-    }
-}
-
 filterSelection("all")
 
 function filterSelection(c) {

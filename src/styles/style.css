@@ -758,6 +758,7 @@ header .header-content .header-button {
   display: flex;
   padding: 0;
   justify-content: center;
+  overflow: hidden;
   list-style-type: none;
   -webkit-flex-flow: row wrap;
 }
@@ -991,6 +992,49 @@ footer .footer-container p {
   color: white;
   font-size: 12px;
   text-transform: uppercase;
+}
+.prev,
+.next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+  top: 50%;
+  font-size: 3em;
+  transform: translateY(-50%);
+  transition: text-shadow 0.25s;
+  color: white;
+  background: pink;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .prev,
+  .next {
+    display: none;
+  }
+}
+.prev {
+  position: absolute;
+  left: 1rem;
+  text-shadow: 1px 1px 8px black;
+}
+.prev:hover {
+  text-shadow: 1px 1px 5px black;
+}
+.prev:active {
+  text-shadow: 1px 1px 1px black;
+}
+.next {
+  position: absolute;
+  right: 1rem;
+  text-shadow: -1px -1px 8px black;
+}
+.next:hover {
+  text-shadow: -1px -1px 5px black;
+}
+.next:active {
+  text-shadow: -1px -1px 1px black;
 }
 * {
   box-sizing: border-box;
