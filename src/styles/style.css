@@ -348,42 +348,6 @@ header .header-content .header-button {
   font-size: 13px;
   line-height: 1.85;
 }
-.about-us .workers-container .previous-button {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  display: flex;
-  width: 50px;
-  height: 50px;
-  z-index: 3;
-  background: #a1a1a1;
-}
-.about-us .workers-container .previous-button:hover {
-  background: brown;
-}
-.about-us .workers-container .previous-button a {
-  width: 100%;
-  height: 100%;
-  background: url("../resources/img/arrows.png") 19px 17px no-repeat;
-}
-.about-us .workers-container .next-button {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  display: flex;
-  width: 50px;
-  height: 50px;
-  z-index: 3;
-  background: #a1a1a1;
-}
-.about-us .workers-container .next-button:hover {
-  background: brown;
-}
-.about-us .workers-container .next-button a {
-  width: 100%;
-  height: 100%;
-  background: url("../resources/img/arrows.png") -9px 17px no-repeat;
-}
 .icon-fb {
   position: relative;
 }
@@ -996,6 +960,7 @@ footer .footer-container p {
 .prev,
 .next {
   position: absolute;
+  display: flex;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -1003,12 +968,10 @@ footer .footer-container p {
   top: 50%;
   font-size: 3em;
   transform: translateY(-50%);
-  transition: text-shadow 0.25s;
-  color: white;
-  background: pink;
+  background: #a1a1a1;
   z-index: 3;
 }
-@media (max-width: 767px) {
+@media (min-width: 1200px) {
   .prev,
   .next {
     display: none;
@@ -1017,13 +980,14 @@ footer .footer-container p {
 .prev {
   position: absolute;
   left: 1rem;
-  text-shadow: 1px 1px 8px black;
 }
 .prev:hover {
-  text-shadow: 1px 1px 5px black;
+  background: brown;
 }
-.prev:active {
-  text-shadow: 1px 1px 1px black;
+.prev a {
+  width: 100%;
+  height: 100%;
+  background: url("../resources/img/arrows.png") 19px 17px no-repeat;
 }
 .next {
   position: absolute;
@@ -1031,10 +995,12 @@ footer .footer-container p {
   text-shadow: -1px -1px 8px black;
 }
 .next:hover {
-  text-shadow: -1px -1px 5px black;
+  background: brown;
 }
-.next:active {
-  text-shadow: -1px -1px 1px black;
+.next a {
+  width: 100%;
+  height: 100%;
+  background: url("../resources/img/arrows.png") -9px 17px no-repeat;
 }
 * {
   box-sizing: border-box;

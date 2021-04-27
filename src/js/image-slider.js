@@ -4,69 +4,30 @@
 
     $.makeSlider = function ($carouselElement) {
 
-        let carouselWidth = null,
-            lastSeenAt = null,
-            numberOfSlides = 0,
-            currentSlide = 1,
-            timeout,
-            className = $($carouselElement).attr("class");
-
-
-        // const slides = document.getElementsByClassName("worker-container");
-        // if (direction === 1) {
-        //     const lastElement = slides[slides.length - 1];
-        //     lastElement.parentNode.insertBefore(lastElement, slides[0]);
-        // } else {
-        //     const firstElement = slides[0];
-        //     firstElement.parentNode.insertBefore(firstElement, slides[slides.length]);
-        // }
-
+        let className = $($carouselElement).attr("class");
 
         const goToSlide = function (slide) {
-            // let oldLeft = parseInt($($carouselElement).css("left")),
-            //     newLeft;
-            //
-            // currentSlide = slide;
-            //
-            // newLeft = (currentSlide - 1) * $(window).width() * -1;
-            //
-            // if (newLeft > 0) {
-            //     newLeft = 0;
-            //     currentSlide = 1;
-            // } else if (newLeft < (carouselWidth - $(window).width()) * -1) {
-            //     newLeft = (carouselWidth - $(window).width()) * -1;
-            //     currentSlide = numberOfSlides;
-            // }
-            //
-            // $($carouselElement).animate({
-            //     left: newLeft
-            // }, 100);
-
-            const slides = document.getElementsByClassName("worker-container");
+            const $slides = $(".worker-container");
 
             if (slide === 1) {
-                const lastElement = slides[slides.length - 1];
-                lastElement.parentNode.insertBefore(lastElement, slides[0]);
-            } else {
-                const firstElement = slides[0];
-                firstElement.parentNode.insertBefore(firstElement, slides[slides.length]);
-            }
+                const $lastElement = $slides.last();
 
-            // goToDot(currentSlide);
+                $lastElement.fadeOut("fast", function () {
+                    $lastElement.parent().prepend($lastElement);
+                    $lastElement.fadeIn("fast");
+                });
+            } else {
+                const firstElement = $slides.first();
+
+                firstElement.fadeOut("fast", function () {
+                    firstElement.parent().append(firstElement);
+                    firstElement.fadeIn("fast");
+                });
+            }
         };
 
         let makeDots = function () {
-            console.log("lal");
-            $($carouselElement).append('<div class="' + className + '-prev prev"></div><div class="' + className + '-next next"></div>');
-
-            for (let i = 0; numberOfSlides > i; i++) {
-
-                if (i === 0) {
-                    $("." + className + "-dots").append("<div class='dot active slide-" + (i + 1) + "'></div>");
-                } else {
-                    $("." + className + "-dots").append("<div class='dot slide-" + (i + 1) + "'></div>");
-                }
-            }
+            $($carouselElement).append('<div class="' + className + '-prev prev"><a></a></div><div class="' + className + '-next next"><a></a></div>');
         };
 
         const next = function () {
@@ -85,21 +46,6 @@
             $("." + className + "-prev").click(function () {
                 prev();
             });
-
-            // $("." + className +"-dots .dot").click(function($this) {
-            //     var dotNumber = $this.target.className.replace(/[^0-9]/g, '');
-            //     currentSlide = parseInt(dotNumber);
-            //     goToSlide(currentSlide);
-            // })
-
-            $(window).resize(function () {
-                // calculateCarouselWidth();
-
-                clearTimeout(timeout);
-                timeout = setTimeout(function () {
-                    goToSlide(currentSlide);
-                }, 250);
-            })
         };
 
         makeDots();
