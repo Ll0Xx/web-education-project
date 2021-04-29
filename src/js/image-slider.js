@@ -7,21 +7,30 @@
         let className = $($carouselElement).attr("class");
 
         const goToSlide = function (slide) {
+            const $container = $(".workers-container");
             const $slides = $(".worker-container");
 
             if (slide === 1) {
                 const $lastElement = $slides.last();
 
-                $lastElement.fadeOut("fast", function () {
+                $slides.animate({
+                    left: $lastElement.width() + parseInt( $lastElement.css("marginLeft") ) * 2
+                }, 300, function () {
+                    console.log("yay done left");
+                    $slides.css('left', '0');
+                    $lastElement.css('opacity', '1');
                     $lastElement.parent().prepend($lastElement);
-                    $lastElement.fadeIn("fast");
                 });
             } else {
-                const firstElement = $slides.first();
+                const $firstElement = $slides.first();
 
-                firstElement.fadeOut("fast", function () {
-                    firstElement.parent().append(firstElement);
-                    firstElement.fadeIn("fast");
+                $slides.animate({
+                    left: -($firstElement.width() + parseInt( $firstElement.css("marginLeft") ) * 2)
+                }, 300, function () {
+                    console.log("yay done right");
+                    $slides.css('left', '0');
+                    $firstElement.css('opacity', '1');
+                    $firstElement.parent().append($firstElement);
                 });
             }
         };

@@ -292,6 +292,7 @@ header .header-content .header-button {
   display: flex;
 }
 .about-us .workers-container .worker-container {
+  position: relative;
   display: block;
   margin: 15px;
   min-width: 250px;
