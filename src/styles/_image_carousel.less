@@ -46,3 +46,42 @@
     background: url("../resources/img/arrows.png") -9px 17px no-repeat;
   }
 }
+
+.dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+  .dot {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    margin: 0.25em;
+    transition: all 0.25s;
+    box-shadow: 0px 1px 8px black;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(255,255,255,0.75);
+      box-shadow: 0px 1px 5px black;
+
+      &.active {
+        background: rgba(255,255,255,0.9);
+      }
+    }
+
+    &:active {
+      text-shadow: 0px 1px 1px black;
+    }
+
+    &.active {
+      background: white;
+    }
+  }
+}
