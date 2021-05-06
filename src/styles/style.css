@@ -1053,4 +1053,7 @@ h2 {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
 }
+.no-scrollable {
+  position: fixed;
+}
 /*# sourceMappingURL=style.css.map */
