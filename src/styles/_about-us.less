@@ -33,82 +33,85 @@
     }
   }
 
-  .workers-container {
-    width: 100%;
+  .workers-slider-container {
     position: relative;
-    height: 380px;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    margin-bottom: 100px;
-    display: flex;
 
-    .worker-container {
+    .workers-container {
+      width: 100%;
       position: relative;
-      display: block;
-      margin: 15px;
-      min-width: 250px;
+      height: 380px;
+      justify-content: left;
+      overflow: hidden;
+      margin-bottom: 100px;
+      display: flex;
 
-      .worker-item {
-        width: 100%;
-        display: flex;
-        background: transparent;
+      .worker-container {
         position: relative;
+        display: block;
+        margin: 15px;
+        min-width: 250px;
 
-        .worker-image {
-          width: 100%;
-          z-index: 0;
-          height: auto;
-        }
-
-        &:hover {
-          background: #717171;
-          z-index: 2;
-        }
-
-        &:hover .worker-image {
-          opacity: 0.5;
-        }
-
-        &:hover .worker-social .worker-social-item {
-          opacity: 1;
-        }
-
-        .worker-social {
+        .worker-item {
           width: 100%;
           display: flex;
-          justify-content: center;
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          background: transparent;
+          position: relative;
 
-          .worker-social-item {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            margin: 8px;
+          .worker-image {
+            width: 100%;
+            z-index: 0;
+            height: auto;
+          }
+
+          &:hover {
+            background: #717171;
             z-index: 2;
-            opacity: 0;
+          }
 
-            &:hover {
-              z-index: 0;
-              background: brown;
+          &:hover .worker-image {
+            opacity: 0.5;
+          }
+
+          &:hover .worker-social .worker-social-item {
+            opacity: 1;
+          }
+
+          .worker-social {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            .worker-social-item {
+              position: relative;
+              width: 30px;
+              height: 30px;
+              margin: 8px;
+              z-index: 2;
+              opacity: 0;
+
+              &:hover {
+                z-index: 0;
+                background: brown;
+              }
             }
           }
         }
-      }
 
-      .worker-name {
-        text-transform: uppercase;
-        font-family: 'Montserrat', 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.71;
-      }
+        .worker-name {
+          text-transform: uppercase;
+          font-family: 'Montserrat', 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 1.71;
+        }
 
-      .worker-position {
-        font-size: 13px;
-        line-height: 1.85;
+        .worker-position {
+          font-size: 13px;
+          line-height: 1.85;
+        }
       }
     }
   }

@@ -281,44 +281,46 @@ header .header-content .header-button {
   margin-left: 15px;
   margin-right: 15px;
 }
-.about-us .workers-container {
+.about-us .workers-slider-container {
+  position: relative;
+}
+.about-us .workers-slider-container .workers-container {
   width: 100%;
   position: relative;
   height: 380px;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: left;
   overflow: hidden;
   margin-bottom: 100px;
   display: flex;
 }
-.about-us .workers-container .worker-container {
+.about-us .workers-slider-container .workers-container .worker-container {
   position: relative;
   display: block;
   margin: 15px;
   min-width: 250px;
 }
-.about-us .workers-container .worker-container .worker-item {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item {
   width: 100%;
   display: flex;
   background: transparent;
   position: relative;
 }
-.about-us .workers-container .worker-container .worker-item .worker-image {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item .worker-image {
   width: 100%;
   z-index: 0;
   height: auto;
 }
-.about-us .workers-container .worker-container .worker-item:hover {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item:hover {
   background: #717171;
   z-index: 2;
 }
-.about-us .workers-container .worker-container .worker-item:hover .worker-image {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item:hover .worker-image {
   opacity: 0.5;
 }
-.about-us .workers-container .worker-container .worker-item:hover .worker-social .worker-social-item {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item:hover .worker-social .worker-social-item {
   opacity: 1;
 }
-.about-us .workers-container .worker-container .worker-item .worker-social {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item .worker-social {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -326,7 +328,7 @@ header .header-content .header-button {
   bottom: 0;
   left: 0;
 }
-.about-us .workers-container .worker-container .worker-item .worker-social .worker-social-item {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item .worker-social .worker-social-item {
   position: relative;
   width: 30px;
   height: 30px;
@@ -334,18 +336,18 @@ header .header-content .header-button {
   z-index: 2;
   opacity: 0;
 }
-.about-us .workers-container .worker-container .worker-item .worker-social .worker-social-item:hover {
+.about-us .workers-slider-container .workers-container .worker-container .worker-item .worker-social .worker-social-item:hover {
   z-index: 0;
   background: brown;
 }
-.about-us .workers-container .worker-container .worker-name {
+.about-us .workers-slider-container .workers-container .worker-container .worker-name {
   text-transform: uppercase;
   font-family: 'Montserrat', 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.71;
 }
-.about-us .workers-container .worker-container .worker-position {
+.about-us .workers-slider-container .workers-container .worker-container .worker-position {
   font-size: 13px;
   line-height: 1.85;
 }
@@ -957,6 +959,12 @@ footer .footer-container p {
   color: white;
   font-size: 12px;
   text-transform: uppercase;
+}
+.arrows-container {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  height: 50px;
 }
 .prev,
 .next {

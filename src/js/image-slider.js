@@ -1,23 +1,24 @@
 // https://codepen.io/killate/pen/XZNgNX
 //
-(function (options) {
+(function () {
 
     $.makeSlider = function ($carouselElement, options) {
 
-        var settings = $.extend({
-            // These are the defaults.
-            color: "#556b2f",
-            backgroundColor: "white"
-        }, options );
+        let settings = $.extend({
+            showElementsCount: 3,
+            elementsToScroll: 1,
+            showArrows: false,
+            showDots: false
+        }, options);
 
         let className = $($carouselElement).attr("class");
 
         $(window).resize(function () {
-            console.log("yay resized")
+            calculateElementsWidth()
         });
 
         const goToSlide = function (slide) {
-            const $slides = $(".worker-container");
+            const $slides = $($carouselElement).find(".slide");
 
             if (slide === 1) {
                 const $lastElement = $slides.last();
@@ -42,12 +43,20 @@
             }
         };
 
-        let makeControlElements = function () {
-            $($carouselElement).append('<div class="' + className + '-prev prev"><a></a></div><div class="' + className + '-next next"><a></a></div>');
+        let calculateElementsWidth = function () {
+            let sliderContainer = $($carouselElement).find('slides-container')
+            let sliderContainerWidth = sliderContainer.prevObject.width();
+            let calculatedElementWidth = sliderContainerWidth / settings.showElementsCount
+                - parseInt(sliderContainer.prevObject.children().children().css("marginLeft")) * 2;
+            sliderContainer.prevObject.children().children().css("min-width", calculatedElementWidth);
+        }
+
+        let makeArrows = function () {
+            $($carouselElement).append('<div class="arrows-container"><div  class="' + className + '-prev prev"><a></a></div><div class="' + className + '-next next"><a></a></div></div>');
         };
 
         let makeDots = function () {
-            var numberOfSlides = 4
+            const numberOfSlides = 4;
 
             $($carouselElement).append('<div class="' + className + '-dots dots">');
 
@@ -78,20 +87,26 @@
             });
         };
 
-        makeControlElements();
-        if (settings.showDots === true) {
-            makeDots()
+        calculateElementsWidth();
+
+        if (settings.showArrows === true) {
+            makeArrows();
         }
+        // if (settings.showDots === true) {
+        //     makeDots()
+        // }
         watchers();
     }
 
-    $.fn.makeSlider = function () {
+    $.fn.makeSlider = function (options) {
         return this.each(function () {
             (new $.makeSlider(this, options));
         });
     };
 })(jQuery);
 
-$(".workers-container").makeSlider({
-    showDots: true
+$(".workers-slider-container").makeSlider({
+    showElementsCount: 3,
+    showDots: true,
+    showArrows: true
 });
