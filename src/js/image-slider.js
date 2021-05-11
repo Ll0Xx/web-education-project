@@ -17,38 +17,43 @@
             calculateElementsWidth()
         });
 
-        const goToSlide = function (slide) {
-            const $slides = $($carouselElement).find(".slide");
-
-            if (slide === 1) {
-                const $lastElement = $slides.last();
-
-                $slides.animate({
-                    left: $lastElement.width() + parseInt($lastElement.css("marginLeft")) * 2
-                }, 300, function () {
-                    $slides.css('left', '0');
-                    $lastElement.css('opacity', '1');
-                    $lastElement.parent().prepend($lastElement);
-                });
+        const goToSlide = function (slideDirection) {
+            let $slides = $($carouselElement).find(".slide");
+            let $sidesToScroll, copiedSlides;
+            if (slideDirection === 1) {
+                $sidesToScroll = $slides.slice($slides.length - settings.elementsToScroll, $slides.length);
+                copiedSlides = $sidesToScroll.clone().prependTo($slides.parent());
             } else {
-                const $firstElement = $slides.first();
-
-                $slides.animate({
-                    left: -($firstElement.width() + parseInt($firstElement.css("marginLeft")) * 2)
-                }, 300, function () {
-                    $slides.css('left', '0');
-                    $firstElement.css('opacity', '1');
-                    $firstElement.parent().append($firstElement);
-                });
+                $sidesToScroll = $slides.slice(0, settings.elementsToScroll);
+                copiedSlides = $sidesToScroll.clone().appendTo($slides.parent());
             }
+            $slides = $($carouselElement).find(".slide");
+            if (slideDirection === 1) {
+                $slides.css('left', -($sidesToScroll.width() + parseInt($sidesToScroll.css("marginLeft")) * 2));
+            }
+
+            $slides.animate({
+                left: (slideDirection === 1) ? 0 : -($slides.width() + parseInt($slides.css("marginLeft")) * 2)
+            }, 300, function () {
+                $slides.css('left', '0');
+                $sidesToScroll.css('opacity', '1');
+                copiedSlides.remove();
+                if (slideDirection === 1) {
+                    $sidesToScroll.parent().prepend($sidesToScroll);
+                } else {
+                    $sidesToScroll.parent().append($sidesToScroll);
+                }
+            });
         };
 
         let calculateElementsWidth = function () {
-            let sliderContainer = $($carouselElement).find('slides-container')
-            let sliderContainerWidth = sliderContainer.prevObject.width();
+            let sliderContainer = $($carouselElement).children(0).prevObject
+            let sliderContainerWidth = sliderContainer.width();
+            let slides = sliderContainer.children().eq(0).children();
             let calculatedElementWidth = sliderContainerWidth / settings.showElementsCount
-                - parseInt(sliderContainer.prevObject.children().children().css("marginLeft")) * 2;
-            sliderContainer.prevObject.children().children().css("min-width", calculatedElementWidth);
+                - parseInt(slides.eq(0).css("marginLeft")) * 2;
+            slides.css("min-width", calculatedElementWidth);
+            sliderContainer.css("height", slides.eq(0).css("height"));
         }
 
         let makeArrows = function () {
@@ -107,6 +112,7 @@
 
 $(".workers-slider-container").makeSlider({
     showElementsCount: 3,
+    elementsToScroll: 1,
     showDots: true,
     showArrows: true
 });
