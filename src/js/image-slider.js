@@ -29,11 +29,11 @@
             }
             $slides = $($carouselElement).find(".slide");
             if (slideDirection === 1) {
-                $slides.css('left', -($sidesToScroll.width() + parseInt($sidesToScroll.css("marginLeft")) * 2));
+                $slides.css('left', -($sidesToScroll.width() + parseInt($sidesToScroll.css("marginLeft")) * 2) * settings.elementsToScroll);
             }
 
             $slides.animate({
-                left: (slideDirection === 1) ? 0 : -($slides.width() + parseInt($slides.css("marginLeft")) * 2)
+                left: (slideDirection === 1) ? 0 : -($slides.width() + parseInt($slides.css("marginLeft")) * 2) * settings.elementsToScroll
             }, 300, function () {
                 $slides.css('left', '0');
                 $sidesToScroll.css('opacity', '1');
@@ -97,9 +97,9 @@
         if (settings.showArrows === true) {
             makeArrows();
         }
-        // if (settings.showDots === true) {
-        //     makeDots()
-        // }
+        if (settings.showDots === true) {
+            makeDots()
+        }
         watchers();
     }
 
@@ -111,8 +111,8 @@
 })(jQuery);
 
 $(".workers-slider-container").makeSlider({
-    showElementsCount: 3,
-    elementsToScroll: 1,
+    showElementsCount: 4,
+    elementsToScroll: 2,
     showDots: true,
     showArrows: true
 });

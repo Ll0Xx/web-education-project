@@ -962,6 +962,7 @@ footer .footer-container p {
   position: absolute;
   top: 35%;
   width: 100%;
+  pointer-events: none;
   height: 50px;
 }
 .prev,
@@ -973,6 +974,7 @@ footer .footer-container p {
   cursor: pointer;
   user-select: none;
   top: 50%;
+  pointer-events: all;
   font-size: 3em;
   transform: translateY(-50%);
   background: #a1a1a1;
