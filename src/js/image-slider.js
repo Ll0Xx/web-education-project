@@ -4,6 +4,8 @@
 
     $.makeSlider = function ($carouselElement, options) {
 
+        let currentSlide = 0;
+
         let settings = $.extend({
             showElementsCount: 3,
             elementsToScroll: 1,
@@ -61,11 +63,12 @@
         };
 
         let makeDots = function () {
-            const numberOfSlides = 4;
+            const slidesCount = $($carouselElement).find(".slide").length;
+            const dotCount = Math.ceil((slidesCount - settings.showElementsCount) / settings.elementsToScroll) + 1;
 
             $($carouselElement).append('<div class="' + className + '-dots dots">');
 
-            for (let i = 0; numberOfSlides > i; i++) {
+            for (let i = 0; dotCount > i; i++) {
                 if (i === 0) {
                     $("." + className + "-dots").append("<div class='dot active slide-" + (i + 1) + "'></div>");
                 } else {
@@ -73,6 +76,11 @@
                 }
             }
         }
+
+        const goToDot = function (currentSlide) {
+            $("." + className + "-dots .dot").removeClass("active");
+            $("." + className + "-dots .dot.slide-" + currentSlide).addClass("active");
+        };
 
         const next = function () {
             goToSlide(1);
@@ -90,6 +98,12 @@
             $("." + className + "-prev").click(function () {
                 prev();
             });
+
+            $("." + className +"-dots .dot").click(function($this) {
+                const dotNumber = $this.target.className.replace(/[^0-9]/g, '');
+                currentSlide = parseInt(dotNumber);
+                goToSlide(currentSlide);
+            })
         };
 
         calculateElementsWidth();
