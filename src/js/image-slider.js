@@ -19,23 +19,36 @@
             calculateElementsWidth()
         });
 
-        const goToSlide = function (slideDirection) {
+        const goToSlide = function (slideDirection, elementsToScroll) {
+            slideDirection *= -1
             let $slides = $($carouselElement).find(".slide");
             let $sidesToScroll, copiedSlides;
+
+             currentSlide += -slideDirection * elementsToScroll;
+
+            if (currentSlide < 0) {
+                currentSlide = $slides.length + currentSlide;
+            }
+            if (currentSlide >= $slides.length) {
+                currentSlide = currentSlide - $slides.length;
+            }
+
+            console.log("current slide:" + currentSlide);
+
             if (slideDirection === 1) {
-                $sidesToScroll = $slides.slice($slides.length - settings.elementsToScroll, $slides.length);
+                $sidesToScroll = $slides.slice($slides.length - elementsToScroll, $slides.length);
                 copiedSlides = $sidesToScroll.clone().prependTo($slides.parent());
             } else {
-                $sidesToScroll = $slides.slice(0, settings.elementsToScroll);
+                $sidesToScroll = $slides.slice(0, elementsToScroll);
                 copiedSlides = $sidesToScroll.clone().appendTo($slides.parent());
             }
             $slides = $($carouselElement).find(".slide");
             if (slideDirection === 1) {
-                $slides.css('left', -($sidesToScroll.width() + parseInt($sidesToScroll.css("marginLeft")) * 2) * settings.elementsToScroll);
+                $slides.css('left', -($sidesToScroll.width() + parseInt($sidesToScroll.css("marginLeft")) * 2) * elementsToScroll);
             }
 
             $slides.animate({
-                left: (slideDirection === 1) ? 0 : -($slides.width() + parseInt($slides.css("marginLeft")) * 2) * settings.elementsToScroll
+                left: (slideDirection === 1) ? 0 : -($slides.width() + parseInt($slides.css("marginLeft")) * 2) * elementsToScroll
             }, 300, function () {
                 $slides.css('left', '0');
                 $sidesToScroll.css('opacity', '1');
@@ -64,15 +77,15 @@
 
         let makeDots = function () {
             const slidesCount = $($carouselElement).find(".slide").length;
-            const dotCount = Math.ceil((slidesCount - settings.showElementsCount) / settings.elementsToScroll) + 1;
+            const dotCount = slidesCount;
 
             $($carouselElement).append('<div class="' + className + '-dots dots">');
 
             for (let i = 0; dotCount > i; i++) {
                 if (i === 0) {
-                    $("." + className + "-dots").append("<div class='dot active slide-" + (i + 1) + "'></div>");
+                    $("." + className + "-dots").append("<div class='dot active slide-" + i + "'></div>");
                 } else {
-                    $("." + className + "-dots").append("<div class='dot slide-" + (i + 1) + "'></div>");
+                    $("." + className + "-dots").append("<div class='dot slide-" + i + "'></div>");
                 }
             }
         }
@@ -83,11 +96,11 @@
         };
 
         const next = function () {
-            goToSlide(1);
+            goToSlide(1, settings.elementsToScroll);
         };
 
         const prev = function () {
-            goToSlide(-1);
+            goToSlide(-1, settings.elementsToScroll);
         };
 
         const watchers = function () {
@@ -99,10 +112,12 @@
                 prev();
             });
 
-            $("." + className +"-dots .dot").click(function($this) {
-                const dotNumber = $this.target.className.replace(/[^0-9]/g, '');
-                currentSlide = parseInt(dotNumber);
-                goToSlide(currentSlide);
+            $("." + className + "-dots .dot").click(function ($this) {
+                const dotNumber = parseInt($this.target.className.replace(/[^0-9]/g, ''));
+                let slide = dotNumber - currentSlide;
+                console.log(dotNumber + " " + currentSlide + "|" + Math.sign(slide) + " : " + slide);
+                // currentSlide = dotNumber;
+                goToSlide(Math.sign(slide), Math.abs(slide));
             })
         };
 
