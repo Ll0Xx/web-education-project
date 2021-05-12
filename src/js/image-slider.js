@@ -24,7 +24,7 @@
             let $slides = $($carouselElement).find(".slide");
             let $sidesToScroll, copiedSlides;
 
-             currentSlide += -slideDirection * elementsToScroll;
+            currentSlide += -slideDirection * elementsToScroll;
 
             if (currentSlide < 0) {
                 currentSlide = $slides.length + currentSlide;
@@ -33,7 +33,7 @@
                 currentSlide = currentSlide - $slides.length;
             }
 
-            console.log("current slide:" + currentSlide);
+            setActiveDot(currentSlide);
 
             if (slideDirection === 1) {
                 $sidesToScroll = $slides.slice($slides.length - elementsToScroll, $slides.length);
@@ -90,7 +90,7 @@
             }
         }
 
-        const goToDot = function (currentSlide) {
+        const setActiveDot = function (currentSlide) {
             $("." + className + "-dots .dot").removeClass("active");
             $("." + className + "-dots .dot.slide-" + currentSlide).addClass("active");
         };
@@ -115,9 +115,8 @@
             $("." + className + "-dots .dot").click(function ($this) {
                 const dotNumber = parseInt($this.target.className.replace(/[^0-9]/g, ''));
                 let slide = dotNumber - currentSlide;
-                console.log(dotNumber + " " + currentSlide + "|" + Math.sign(slide) + " : " + slide);
-                // currentSlide = dotNumber;
                 goToSlide(Math.sign(slide), Math.abs(slide));
+                setActiveDot(dotNumber);
             })
         };
 

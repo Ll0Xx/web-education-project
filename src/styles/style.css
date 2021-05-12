@@ -1028,21 +1028,21 @@ footer .footer-container p {
   border-radius: 50%;
   margin: 0.25em;
   transition: all 0.25s;
-  box-shadow: 0px 1px 8px black;
+  box-shadow: 0px 1px 8px gray;
   cursor: pointer;
 }
 .dots .dot:hover {
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0px 1px 5px black;
+  background: rgba(165, 42, 42, 0.75);
+  box-shadow: 0px 1px 5px dimgray;
 }
 .dots .dot:hover.active {
-  background: rgba(255, 255, 255, 0.9);
+  background: darkred;
 }
 .dots .dot:active {
-  text-shadow: 0px 1px 1px black;
+  text-shadow: 0px 1px 1px gray;
 }
 .dots .dot.active {
-  background: gray;
+  background: brown;
 }
 * {
   box-sizing: border-box;
