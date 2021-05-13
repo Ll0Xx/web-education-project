@@ -144,3 +144,10 @@ $(".workers-slider-container").makeSlider({
     showDots: true,
     showArrows: true
 });
+
+$(".brands-slider-container").makeSlider({
+    showElementsCount: 5,
+    elementsToScroll: 1,
+    showDots: true,
+    showArrows: false
+});

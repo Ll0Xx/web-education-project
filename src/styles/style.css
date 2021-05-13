@@ -718,16 +718,16 @@ header .header-content .header-button {
   flex-direction: column;
   margin-top: 120px;
 }
-.brands-background .brands ul {
-  margin-top: 120px;
-  display: flex;
-  padding: 0;
-  justify-content: center;
-  overflow: hidden;
-  list-style-type: none;
-  -webkit-flex-flow: row wrap;
+.brands-background .brands .brands-slider-container {
+  position: relative;
+  margin-bottom: 100px;
 }
-.brands-background .brands ul li {
+.brands-background .brands .brands-slider-container .brands-container {
+  display: flex;
+  justify-content: left;
+  overflow: hidden;
+}
+.brands-background .brands .brands-slider-container .brands-container .brand-item {
   margin: 20px;
 }
 .brands-background .brands .brands-description {
@@ -964,6 +964,9 @@ footer .footer-container p {
   width: 100%;
   pointer-events: none;
   height: 50px;
+}
+.slide {
+  position: relative;
 }
 .prev,
 .next {
